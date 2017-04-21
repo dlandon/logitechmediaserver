@@ -8,7 +8,7 @@ TERM=xterm
 # Update repositories
 sudo apt-get update
 
-#Perform Upgrade
+# Perform Upgrade
 sudo apt-get -y upgrade
 sudo apt-get -y dist-upgrade
 
