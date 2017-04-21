@@ -53,7 +53,7 @@ wget $latest_lms
 lms_deb=${latest_lms##*/}
 dpkg -i $lms_deb
 
-chmod +x /etc/my_init.d/20_apt_update
+chmod +x /etc/my_init.d/20_apt_update.sh
 
 #########################################
 ##                 CLEANUP             ##
