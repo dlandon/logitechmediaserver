@@ -19,5 +19,6 @@ docker run -d --name="LogitechMediaServer" \
 logitechmediaserver
 
 Changes:
+
 2017-04-22
 - Added PUID and PGID for proper appdata ownership settings for unRAID.
