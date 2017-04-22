@@ -1,8 +1,10 @@
-# Logitech media Server
+# Logitech Media Server
 
 Docker image for Logitech Media Server (SqueezeCenter, SqueezeboxServer, SlimServer)
 
-Run with:
+The Docker updates the system on restart to apply security and Linux updates.
+
+To run LMS on unRAID:
 
 docker run -d --name="LogitechMediaServer" \
 --net="bridge" \
@@ -15,3 +17,7 @@ docker run -d --name="LogitechMediaServer" \
 -v "/mnt/user/Music":"/music":rw \
 -v "/etc/localtime":"/etc/localtime":ro \
 logitechmediaserver
+
+Changes:
+2017-04-22
+- Added PUID and PGID for proper appdata ownership settings for unRAID.
