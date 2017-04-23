@@ -1,16 +1,14 @@
-#!/bin/sh -e
+#!/bin/sh
 #
 # 20_apt_update.sh
 #
 
-TERM=xterm
-
 # Update repositories
-sudo apt-get update
+apt-get update
 
 # Perform Upgrade
-sudo apt-get -y upgrade
-sudo apt-get -y dist-upgrade
+apt-get -y upgrade
+apt-get -y dist-upgrade
 
 # Clean + purgeold/obsoleted packages
-sudo apt-get -y autoremove
+apt-get -y autoremove

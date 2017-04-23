@@ -20,5 +20,7 @@ logitechmediaserver
 
 Changes:
 
+2017-04-23
+- Organization and code cleanup.
 2017-04-22
 - Added PUID and PGID for proper appdata ownership settings for unRAID.
