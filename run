@@ -28,6 +28,7 @@ usermod -u $PUID nobody
 usermod -g $PGID nobody
 usermod -d /config nobody
 chown -R nobody:users /config
+chmod -R go+rw /config
 
 # Start squeezeboxserver
 squeezeboxserver --u $SLIMUSER --prefsdir /config/prefs --logdir /config/logs --cachedir /config/cache
