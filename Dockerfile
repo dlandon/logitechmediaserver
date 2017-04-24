@@ -11,7 +11,7 @@ LC_ALL="C.UTF-8" \
 LANG="en_US.UTF-8" \
 LANGUAGE="en_US.UTF-8" \
 TERM="xterm" \
-SLIMUSER="squeezeboxserver"
+SLIMUSER="nobody"
 
 COPY 20_apt_update.sh /etc/my_init.d/
 COPY run /etc/service/logitechmediaserver/
