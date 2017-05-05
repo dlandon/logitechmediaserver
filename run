@@ -31,4 +31,5 @@ chown -R nobody:users /config
 chmod -R go+rw /config
 
 # Start squeezeboxserver
+sleep 3
 squeezeboxserver --u $SLIMUSER --prefsdir /config/prefs --logdir /config/logs --cachedir /config/cache

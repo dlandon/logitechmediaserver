@@ -20,6 +20,9 @@ logitechmediaserver
 
 Changes:
 
+2017-05-04
+- Added time delay to startup to prevent db commit error.
+
 2017-04-23
 - Organization and code cleanup.
 
