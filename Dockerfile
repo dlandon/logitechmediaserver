@@ -14,6 +14,7 @@ ENV \
 	SLIMUSER="nobody"
 
 COPY 20_apt_update.sh /etc/my_init.d/
+COPY 30_firstrun.sh /etc/my_init.d/
 COPY run /etc/service/logitechmediaserver/
 
 RUN \
