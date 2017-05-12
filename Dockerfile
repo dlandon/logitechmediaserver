@@ -42,7 +42,10 @@ RUN \
 	# Clean APT install files
 	apt-get clean -y
 
-VOLUME /config /music
+VOLUME \
+	/config \
+	/music
+
 EXPOSE 3483 3483/udp 9000 9090
 
 CMD ["/sbin/my_init"]

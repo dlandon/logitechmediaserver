@@ -20,6 +20,9 @@ logitechmediaserver
 
 Changes:
 
+2017-05-12
+- Update 7.9.1 to latest.
+
 2017-05-07
 - Upgrade LMS to 7.9.1.
 - Some organizational changes.
