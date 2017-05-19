@@ -32,5 +32,9 @@ usermod -d /config nobody
 chown -R nobody:users /config
 chmod -R go+rw /config
 
-echo "Current timezone : $TZ"
+# Get docker env timezone and set system timezone
+echo "Setting the timezone to : $TZ"
+echo $TZ > /etc/timezone
+ln -fs /usr/share/zoneinfo/$TZ /etc/localtime
+dpkg-reconfigure tzdata
 echo "Date: `date`"
