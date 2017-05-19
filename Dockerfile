@@ -10,6 +10,7 @@ ENV \
 	LC_ALL="C.UTF-8" \
 	LANG="en_US.UTF-8" \
 	LANGUAGE="en_US.UTF-8" \
+	TZ="Etc/UTC" \
 	TERM="xterm" \
 	SLIMUSER="nobody"
 
@@ -25,7 +26,7 @@ RUN \
 	apt-get update && \
 	apt-get -y upgrade && \
 	apt-get -y dist-upgrade && \
-	apt-get install -y lame faad flac sox perl wget && \
+	apt-get install -y lame faad flac sox perl wget tzdata && \
 
 	# Install LMS
 	url="http://www.mysqueezebox.com/update/?version=7.9.1&revision=1&geturl=1&os=deb" && \

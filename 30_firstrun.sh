@@ -31,3 +31,6 @@ usermod -g $PGID nobody
 usermod -d /config nobody
 chown -R nobody:users /config
 chmod -R go+rw /config
+
+echo "Current timezone : $TZ"
+echo "Date: `date`"

@@ -20,6 +20,9 @@ logitechmediaserver
 
 Changes:
 
+2017-05-19
+- Fix time zone.
+
 2017-05-12
 - Update 7.9.1 to latest.
 
