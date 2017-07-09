@@ -20,6 +20,9 @@ logitechmediaserver
 
 Changes:
 
+2017-07-09
+- Add perl packages for IO::Socket::SSL.
+
 2017-05-19
 - Fix time zone.
 
