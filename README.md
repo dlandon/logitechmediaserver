@@ -20,6 +20,9 @@ logitechmediaserver
 
 Changes:
 
+2017-07-11
+- Add OpenSSL package.
+
 2017-07-09
 - Add perl packages for IO::Socket::SSL.
 
