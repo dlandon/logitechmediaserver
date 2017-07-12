@@ -26,7 +26,9 @@ RUN \
 	apt-get update && \
 	apt-get -y upgrade && \
 	apt-get -y dist-upgrade && \
-	apt-get install -y lame faad flac sox perl wget tzdata libio-socket-ssl-perl libcrypt-ssleay-perl openssl libcrypt-openssl-bignum-perl libcrypt-openssl-random-perl libcrypt-openssl-rsa-perl && \
+	apt-get install -y lame faad flac sox perl wget tzdata && \
+	apt-get install -y libio-socket-ssl-perl libcrypt-ssleay-perl &&\
+	apt-get install -y openssl libcrypt-openssl-bignum-perl libcrypt-openssl-random-perl libcrypt-openssl-rsa-perl && \
 
 	# Install LMS
 	url="http://www.mysqueezebox.com/update/?version=7.9.1&revision=1&geturl=1&os=deb" && \
