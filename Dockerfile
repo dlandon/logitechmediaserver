@@ -14,8 +14,7 @@ ENV \
 	TERM="xterm" \
 	SLIMUSER="nobody"
 
-COPY 20_apt_update.sh /etc/my_init.d/
-COPY 30_firstrun.sh /etc/my_init.d/
+COPY init /etc/my_init.d/
 COPY run /etc/service/logitechmediaserver/
 
 RUN \
@@ -43,7 +42,8 @@ RUN \
 	chmod -R +x /etc/service/logitechmediaserver /etc/my_init.d/ && \
 
 	# Clean APT install files
-	apt-get clean -y
+	apt-get clean -y && \
+	apt-get -y autoremove
 
 VOLUME \
 	/config \
