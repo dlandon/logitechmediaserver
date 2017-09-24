@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# 30_firstrun.sh
+# 10_firstrun.sh
 #
 
 # Create prefs directory if it doesn't exist
