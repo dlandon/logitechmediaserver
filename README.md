@@ -20,6 +20,9 @@ logitechmediaserver
 
 Changes:
 
+2017-09-25
+- Added pv (pipeview) required for latest Spotty.
+
 2017-09-24
 - Modifications to dockerfile for auto build.
 
