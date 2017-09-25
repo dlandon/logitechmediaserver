@@ -21,7 +21,7 @@ RUN rm -rf /etc/service/cron /etc/service/syslog-ng
 RUN	apt-get update && \
 	apt-get -y upgrade && \
 	apt-get -y dist-upgrade && \
-	apt-get install -y lame faad flac sox perl wget tzdata && \
+	apt-get install -y lame faad flac sox perl wget tzdata pv && \
 	apt-get install -y libio-socket-ssl-perl libcrypt-ssleay-perl &&\
 	apt-get install -y openssl libcrypt-openssl-bignum-perl libcrypt-openssl-random-perl libcrypt-openssl-rsa-perl
 
