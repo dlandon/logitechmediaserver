@@ -31,17 +31,17 @@ RUN	url="http://www.mysqueezebox.com/update/?version=7.9.1&revision=1&geturl=1&o
 	cd /sources && \
 	wget $latest_lms && \
 	lms_deb=${latest_lms##*/} && \
-	dpkg -i $lms_deb && \
-	apt-get -y remove wget
+	dpkg -i $lms_deb
 
 RUN	chmod -R +x /etc/service/logitechmediaserver /etc/my_init.d/
 
-RUN	apt-get clean -y && \
+RUN	apt-get -y remove wget && \
+	apt-get clean -y && \
 	apt-get -y autoremove
 
 VOLUME \
-	/config \
-	/music
+	["/config"] \
+	["/music"]
 
 EXPOSE 3483 3483/udp 9000 9090
 
