@@ -1,17 +1,8 @@
-FROM phusion/baseimage:0.9.22
+FROM dlandon/baseimage
 
 LABEL maintainer="dlandon"
 
-ENV DEBCONF_NONINTERACTIVE_SEEN="true" \
-	DEBIAN_FRONTEND="noninteractive" \
-	DISABLESSH="true" \
-	HOME="/root" \
-	LC_ALL="C.UTF-8" \
-	LANG="en_US.UTF-8" \
-	LANGUAGE="en_US.UTF-8" \
-	TZ="Etc/UTC" \
-	TERM="xterm" \
-	SLIMUSER="nobody"
+ENV SLIMUSER="nobody"
 
 COPY init /etc/my_init.d/
 COPY run /etc/service/logitechmediaserver/
@@ -44,5 +35,3 @@ VOLUME \
 	["/music"]
 
 EXPOSE 3483 3483/udp 9000 9090
-
-CMD ["/sbin/my_init"]

@@ -20,6 +20,9 @@ logitechmediaserver
 
 Changes:
 
+2017-09-26
+- Change to dlandon/baseimage.
+
 2017-09-25
 - Added pv (pipeview) required for latest Spotty.
 
