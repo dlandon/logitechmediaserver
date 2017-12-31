@@ -19,6 +19,8 @@ docker run -d --name="LogitechMediaServer" \
 logitechmediaserver
 
 Changes:
+2017-12-31
+- Update to latest Nightly Build.
 
 2017-11-30
 - Update base image.
