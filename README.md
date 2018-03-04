@@ -19,6 +19,11 @@ docker run -d --name="LogitechMediaServer" \
 logitechmediaserver
 
 Changes:
+
+2018-03-03
+- Update to latest Nightly Build.
+- Update to phusion 10.0.
+
 2017-12-31
 - Update to latest Nightly Build.
 

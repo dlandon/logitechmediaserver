@@ -28,7 +28,8 @@ RUN	chmod -R +x /etc/service/logitechmediaserver /etc/my_init.d/
 
 RUN	apt-get -y remove wget && \
 	apt-get clean -y && \
-	apt-get -y autoremove
+	apt-get -y autoremove && \
+	rm -rf /tmp/* /var/tmp/*
 
 VOLUME \
 	["/config"] \
