@@ -20,6 +20,9 @@ logitechmediaserver
 
 Changes:
 
+2018-05-13
+- Update to latest Nightly Build.
+
 2018-03-03
 - Update to latest Nightly Build.
 - Update to phusion 10.0.
