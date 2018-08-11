@@ -16,7 +16,7 @@ RUN	apt-get update && \
 	apt-get install -y libio-socket-ssl-perl libcrypt-ssleay-perl &&\
 	apt-get install -y openssl libcrypt-openssl-bignum-perl libcrypt-openssl-random-perl libcrypt-openssl-rsa-perl
 
-RUN	url="http://www.mysqueezebox.com/update/?version=7.9.1&revision=1&geturl=1&os=deb" && \
+RUN	url="http://www.mysqueezebox.com/update/?version=7.9.2&revision=1&geturl=1&os=deb" && \
 	latest_lms=$(wget -q -O - "$url") && \
 	mkdir -p /sources && \
 	cd /sources && \
