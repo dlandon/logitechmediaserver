@@ -6,6 +6,7 @@
 # Create prefs directory if it doesn't exist
 if [ ! -d /config/prefs ]; then
 	mkdir /config/prefs
+	mkdir /config/prefs/plugin
 fi
 
 # Create logs directory if it doesn't exist
