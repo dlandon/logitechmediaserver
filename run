@@ -5,4 +5,5 @@
 
 # Start squeezeboxserver
 echo "Start Logitech Media Server..."
+sleep 5
 squeezeboxserver --u $SLIMUSER --prefsdir /config/prefs --logdir /config/logs --cachedir /config/cache
