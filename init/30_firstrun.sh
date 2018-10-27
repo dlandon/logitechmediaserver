@@ -23,7 +23,7 @@ if [ ! -d /config/playlists ]; then
 	mkdir /config/playlists
 fi
 
-# Configure user nobody to match unRAID's settings
+# Configure user nobody to match Unraid's settings
 PUID=${PUID:-99}
 PGID=${PGID:-100}
 usermod -u $PUID nobody

@@ -4,7 +4,7 @@ Docker image for Logitech Media Server (SqueezeCenter, SqueezeboxServer, SlimSer
 
 The Docker updates the system on restart to apply security and Linux updates.
 
-To run LMS on unRAID:
+To run LMS on Unraid:
 
 docker run -d --name="LogitechMediaServer" \
 --net="bridge" \
@@ -19,6 +19,9 @@ docker run -d --name="LogitechMediaServer" \
 logitechmediaserver
 
 Changes:
+
+2018-10-27
+- Update to latest Nightly Build (7.9.2).
 
 2018-08-11
 - Update to latest Nightly Build (7.9.2).
@@ -68,4 +71,4 @@ Changes:
 - Organization and code cleanup.
 
 2017-04-22
-- Added PUID and PGID for proper appdata ownership settings for unRAID.
+- Added PUID and PGID for proper appdata ownership settings for Unraid.
