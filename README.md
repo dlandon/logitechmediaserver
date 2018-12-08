@@ -20,6 +20,9 @@ logitechmediaserver
 
 Changes:
 
+2018-12-08
+- Update to latest Nightly Build (7.9.2).
+
 2018-10-27
 - Update to latest Nightly Build (7.9.2).
 
