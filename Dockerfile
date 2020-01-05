@@ -1,6 +1,16 @@
-FROM dlandon/baseimage
+FROM phusion/baseimage:0.11
 
 LABEL maintainer="dlandon"
+
+ENV	DEBCONF_NONINTERACTIVE_SEEN="true" \
+	DEBIAN_FRONTEND="noninteractive" \
+	DISABLE_SSH="true" \
+	HOME="/root" \
+	LC_ALL="C.UTF-8" \
+	LANG="en_US.UTF-8" \
+	LANGUAGE="en_US.UTF-8" \
+	TZ="Etc/UTC" \
+	TERM="xterm"
 
 ENV SLIMUSER="nobody"
 
@@ -23,15 +33,16 @@ RUN	url="http://www.mysqueezebox.com/update/?version=7.9.2&revision=1&geturl=1&o
 	lms_deb=${latest_lms##*/} && \
 	dpkg -i $lms_deb
 
-RUN	chmod -R +x /etc/service/logitechmediaserver /etc/my_init.d/
-
 RUN	apt-get -y remove wget && \
 	apt-get clean -y && \
 	apt-get -y autoremove && \
-	rm -rf /tmp/* /var/tmp/*
+	rm -rf /tmp/* /var/tmp/* && \
+	chmod -R +x /etc/service/logitechmediaserver /etc/my_init.d/
 
 VOLUME \
 	["/config"] \
 	["/music"]
 
 EXPOSE 3483 3483/udp 9000 9090
+
+CMD ["/sbin/my_init"]
