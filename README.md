@@ -19,6 +19,8 @@ docker run -d --name="LogitechMediaServer" \
 logitechmediaserver
 
 Changes:
+2020-01-23
+- Upgrade LMS to 7.9.2.
 
 2019-12-28
 - Update to latest Nightly Build (7.9.2).
