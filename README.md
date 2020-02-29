@@ -19,6 +19,9 @@ docker run -d --name="LogitechMediaServer" \
 logitechmediaserver
 
 Changes:
+2020-02-29
+- Fix docker failure when it can't update.
+
 2020-01-23
 - Upgrade LMS to 7.9.2.
 
