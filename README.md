@@ -18,7 +18,8 @@ docker run -d --name="LogitechMediaServer" \
 -v "/mnt/user/Music":"/music":rw \
 logitechmediaserver
 
-Changes:
+### Change Log:
+
 2020-02-29
 - Fix docker failure when it can't update.
 
