@@ -20,6 +20,9 @@ logitechmediaserver
 
 ### Change Log:
 
+2020-03-11
+- Update to latest Nightly Build (8.0.0).
+
 2020-02-29
 - Fix docker failure when it can't update.
 

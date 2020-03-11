@@ -12,7 +12,8 @@ ENV	DEBCONF_NONINTERACTIVE_SEEN="true" \
 	TZ="Etc/UTC" \
 	TERM="xterm"
 
-ENV SLIMUSER="nobody"
+ENV SLIMUSER="nobody" \
+	LMS_VERSION="8.0.0"
 
 COPY init /etc/my_init.d/
 COPY run /etc/service/logitechmediaserver/
@@ -25,7 +26,7 @@ RUN	apt-get update && \
 	apt-get install -y libio-socket-ssl-perl libcrypt-ssleay-perl &&\
 	apt-get install -y openssl libcrypt-openssl-bignum-perl libcrypt-openssl-random-perl libcrypt-openssl-rsa-perl
 
-RUN	url="http://www.mysqueezebox.com/update/?version=7.9.2&revision=1&geturl=1&os=deb" && \
+RUN	url="http://www.mysqueezebox.com/update/?version=${LMS_VERSION}&revision=1&geturl=1&os=deb" && \
 	latest_lms=$(wget -q -O - "$url") && \
 	mkdir -p /sources && \
 	cd /sources && \
