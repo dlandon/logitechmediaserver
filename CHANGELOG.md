@@ -1,5 +1,8 @@
 ## Change Log
 
+### 2020-08-15
+- Update to latest Nightly Build (8.0.0).
+
 ### 2020-07-19
 - Update to latest Nightly Build (8.0.0).
 - Update baseimage to bionic-1.0.0.
@@ -14,7 +17,7 @@
 - Fix docker failure when it can't update.
 
 ### 2020-01-23
-- Upgrade LMS to 7.9.2.
+- Upgrade LMS to 8.0.0.
 
 ### 2019-12-28
 - Update to latest Nightly Build (7.9.2).
