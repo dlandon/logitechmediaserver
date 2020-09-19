@@ -1,5 +1,8 @@
 ## Change Log
 
+### 2020-09-19
+- Update to latest Nightly Build (8.0.0).
+
 ### 2020-08-15
 - Update to latest Nightly Build (8.0.0).
 
