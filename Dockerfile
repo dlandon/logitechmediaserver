@@ -51,5 +51,5 @@ VOLUME \
 FROM build5 as build6
 EXPOSE 3483 3483/udp 9000 9090
 
-FROM build6 as build7
+FROM build6
 CMD ["/sbin/my_init"]
