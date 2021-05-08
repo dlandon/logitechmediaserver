@@ -1,5 +1,8 @@
 ## Change Log
 
+### 2021-05-08
+- Update to Ubuntu 20.04.
+
 ### 2021-01-25
 - Update to latest Nightly Build (8.1.0).
 

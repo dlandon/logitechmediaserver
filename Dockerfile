@@ -1,4 +1,4 @@
-FROM phusion/baseimage:bionic-1.0.0 as builder
+FROM phusion/baseimage:focal-1.0.0 as builder
 
 LABEL maintainer="dlandon"
 
@@ -41,7 +41,9 @@ RUN	apt-get -y remove wget && \
 	apt-get clean -y && \
 	apt-get -y autoremove && \
 	rm -rf /tmp/* /var/tmp/* && \
-	chmod -R +x /etc/service/logitechmediaserver /etc/my_init.d/
+	chmod -R +x /etc/service/logitechmediaserver /etc/my_init.d/ && \
+	sed -i s#3.13#3.25#g /etc/syslog-ng/syslog-ng.conf && \
+	sed -i 's#use_dns(no)#use_dns(yes)#' /etc/syslog-ng/syslog-ng.conf
 
 FROM build4 as build5
 VOLUME \
