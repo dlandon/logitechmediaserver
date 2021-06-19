@@ -12,7 +12,7 @@ ENV	DEBCONF_NONINTERACTIVE_SEEN="true" \
 	TZ="Etc/UTC" \
 	TERM="xterm" \
 	SLIMUSER="nobody" \
-	LMS_VERSION="8.1.0"
+	LMS_VERSION="8.1.2"
 
 FROM builder as build1
 COPY init /etc/my_init.d/

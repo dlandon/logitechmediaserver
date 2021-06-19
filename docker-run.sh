@@ -10,4 +10,4 @@ docker run -d --name="LogitechMediaServer" \
 -e TZ="America/New_York" \
 -v "/mnt/user/appdata/LogitechMediaServer":"/config":rw \
 -v "/mnt/user/Music":"/music":rw \
-logitechmediaserver
+dlandon/logitechmediaserver
