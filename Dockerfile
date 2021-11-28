@@ -1,4 +1,4 @@
-FROM phusion/baseimage:focal-1.0.0 as builder
+FROM phusion/baseimage:master as builder
 
 LABEL maintainer="dlandon"
 
@@ -12,7 +12,7 @@ ENV	DEBCONF_NONINTERACTIVE_SEEN="true" \
 	TZ="Etc/UTC" \
 	TERM="xterm" \
 	SLIMUSER="nobody" \
-	LMS_VERSION="8.2.0"
+	LMS_VERSION="8.2.1"
 
 FROM builder as build1
 COPY init /etc/my_init.d/
