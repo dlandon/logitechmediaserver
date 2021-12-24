@@ -1,5 +1,9 @@
 ## Change Log
 
+### 2021-12-24
+- Add ffmpeg package so media players that don't support wma can play wma files.
+- Update to latest Nightly Build (8.2.1).
+
 ### 2021-11-27
 - Update to latest Nightly Build (8.2.1).
 
