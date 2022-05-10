@@ -7,7 +7,7 @@ docker run -d --name="LogitechMediaServer" \
 -p 9090:9090/tcp \
 -e PUID="99" \
 -e PGID="100" \
--e TZ="America/New_York" \
+-e TZ="America/Chicago" \
 -v "/mnt/user/appdata/LogitechMediaServer":"/config":rw \
 -v "/mnt/user/Music":"/music":rw \
 dlandon/logitechmediaserver
