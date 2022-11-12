@@ -1,4 +1,4 @@
-FROM phusion/baseimage:focal-1.2.0 as builder
+FROM phusion/baseimage:jammy-1.0.1 as builder
 
 LABEL maintainer="dlandon"
 
@@ -26,7 +26,7 @@ RUN	apt-get update && \
 	apt-get install -y lame faad flac sox perl wget tzdata pv && \
 	apt-get install -y libio-socket-ssl-perl libcrypt-ssleay-perl &&\
 	apt-get install -y openssl libcrypt-openssl-bignum-perl libcrypt-openssl-random-perl libcrypt-openssl-rsa-perl && \
-	apt-get install -y ffmpeg
+	apt-get install -y ffmpeg icedax
 
 FROM build2 as build3
 RUN	url="http://www.mysqueezebox.com/update/?version=${LMS_VERSION}&revision=1&geturl=1&os=deb" && \
@@ -42,7 +42,9 @@ RUN	apt-get -y remove wget && \
 	apt-get clean -y && \
 	apt-get -y autoremove && \
 	rm -rf /tmp/* /var/tmp/* && \
-	chmod -R +x /etc/service/logitechmediaserver /etc/my_init.d/
+	chmod -R +x /etc/service/logitechmediaserver /etc/my_init.d/ && \
+	groupmod -g 19 cdrom && \
+	adduser nobody cdrom
 
 FROM build4 as build5
 VOLUME \

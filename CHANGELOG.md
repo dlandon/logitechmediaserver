@@ -1,5 +1,8 @@
 ## Change Log
 
+### 2022-11-12
+- Update to Ubuntu 22.04.
+
 ### 2022-11-10
 - Update to latest Nightly Build (8.3.0).
 
