@@ -1,7 +1,13 @@
 ## Change Log
 
+### 2023-02-18
+- Update to latest Nightly Build (8.3.2).
+
+### 2022-11-19
+- Update to latest Nightly Build (8.3.1).
+
 ### 2022-11-12
-- Update to Ubuntu 22.04.
+- Update to Ubuntu 22.04 (jammy).
 
 ### 2022-11-10
 - Update to latest Nightly Build (8.3.0).
