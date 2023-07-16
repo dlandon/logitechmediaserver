@@ -1,5 +1,8 @@
 ## Change Log
 
+### 2023-07-16
+- Update to latest Nightly Build (8.4.0).
+
 ### 2023-06-06
 - Update to latest Nightly Build (8.4.0).
 
