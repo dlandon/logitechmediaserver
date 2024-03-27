@@ -12,7 +12,7 @@ ENV	DEBCONF_NONINTERACTIVE_SEEN="true" \
 	TZ="Etc/UTC" \
 	TERM="xterm" \
 	SLIMUSER="nobody" \
-	LMS_VERSION="8.4.0"
+	LMS_VERSION="8.5.0"
 
 FROM builder as build1
 COPY init /etc/my_init.d/
@@ -29,13 +29,10 @@ RUN	apt-get update && \
 	apt-get install -y ffmpeg icedax
 
 FROM build2 as build3
-RUN	url="http://www.mysqueezebox.com/update/?version=${LMS_VERSION}&revision=1&geturl=1&os=deb" && \
-	latest_lms=$(wget -q -O - "$url") && \
-	mkdir -p /sources && \
-	cd /sources && \
-	wget $latest_lms && \
-	lms_deb=${latest_lms##*/} && \
-	dpkg -i $lms_deb
+RUN	url="https://downloads.lms-community.org/LogitechMediaServer_v${LMS_VERSION}/logitechmediaserver_${LMS_VERSION}_amd64.deb" && \
+	cd /tmp && \
+	wget -q "${url}" && \
+	dpkg -i "logitechmediaserver_${LMS_VERSION}_amd64.deb"
 
 FROM build3 as build4
 RUN	apt-get -y remove wget && \

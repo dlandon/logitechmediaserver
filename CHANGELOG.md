@@ -1,5 +1,9 @@
 ## Change Log
 
+### 2024-03-27
+- Update to latest Nightly Build (8.5.0).
+- This version removes all dependency on MySqueezebox.com.
+
 ### 2023-10-15
 - Update to latest Nightly Build (8.4.0).
 
