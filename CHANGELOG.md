@@ -1,5 +1,9 @@
 ## Change Log
 
+### 2024-10-04
+- Update to phusion jammy-1.0.3.
+- Update to latest Release (8.5.0).
+
 ### 2024-03-27
 - Update to latest Nightly Build (8.5.0).
 - This version removes all dependency on MySqueezebox.com.

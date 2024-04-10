@@ -1,4 +1,4 @@
-FROM phusion/baseimage:jammy-1.0.1 as builder
+FROM phusion/baseimage:jammy-1.0.3 as builder
 
 LABEL maintainer="dlandon"
 
