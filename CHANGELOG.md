@@ -1,6 +1,12 @@
 ## Change Log
 
-### 2024-10-04
+### 2024-07-20
+- Update to latest Stable Release (8.5.2).
+
+### 2024-04-25
+- Update to phusion jammy-1.0.4.
+
+### 2024-04-10
 - Update to phusion jammy-1.0.3.
 - Update to latest Release (8.5.0).
 

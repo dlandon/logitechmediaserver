@@ -1,4 +1,4 @@
-FROM phusion/baseimage:jammy-1.0.3 as builder
+FROM phusion/baseimage:jammy-1.0.4
 
 LABEL maintainer="dlandon"
 
@@ -12,15 +12,13 @@ ENV	DEBCONF_NONINTERACTIVE_SEEN="true" \
 	TZ="Etc/UTC" \
 	TERM="xterm" \
 	SLIMUSER="nobody" \
-	LMS_VERSION="8.5.0"
+	LMS_VERSION="8.5.2"
 
-FROM builder as build1
 COPY init /etc/my_init.d/
 COPY run /etc/service/logitechmediaserver/
 
 RUN rm -rf /etc/service/cron /etc/service/syslog-ng
 
-FROM build1 as build2
 RUN	apt-get update && \
 	apt-get -y upgrade -o Dpkg::Options::="--force-confold" && \
 	apt-get install -y lame faad flac sox perl wget tzdata pv && \
@@ -28,13 +26,11 @@ RUN	apt-get update && \
 	apt-get install -y openssl libcrypt-openssl-bignum-perl libcrypt-openssl-random-perl libcrypt-openssl-rsa-perl && \
 	apt-get install -y ffmpeg icedax
 
-FROM build2 as build3
 RUN	url="https://downloads.lms-community.org/LogitechMediaServer_v${LMS_VERSION}/logitechmediaserver_${LMS_VERSION}_amd64.deb" && \
 	cd /tmp && \
 	wget -q "${url}" && \
 	dpkg -i "logitechmediaserver_${LMS_VERSION}_amd64.deb"
 
-FROM build3 as build4
 RUN	apt-get -y remove wget && \
 	apt-get clean -y && \
 	apt-get -y autoremove && \
@@ -43,13 +39,10 @@ RUN	apt-get -y remove wget && \
 	groupmod -g 19 cdrom && \
 	adduser nobody cdrom
 
-FROM build4 as build5
 VOLUME \
 	["/config"] \
 	["/music"]
 
-FROM build5 as build6
 EXPOSE 3483 3483/udp 9000 9090
 
-FROM build6
 CMD ["/sbin/my_init"]
