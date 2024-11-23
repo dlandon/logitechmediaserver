@@ -1,5 +1,8 @@
 ## Change Log
 
+### 2024-11-23
+- Update packages after they are installed.
+
 ### 2024-07-20
 - Update to latest Stable Release (8.5.2).
 
